@@ -106,7 +106,7 @@ KERNEL_MAKE_FLAGS :=
 KERNEL_MAKE_FLAGS += -j$(shell getconf _NPROCESSORS_ONLN)
 
 TOOLS_PATH_OVERRIDE := \
-    PERL5LIB=$(BUILD_TOP)/prebuilts/tools-custom/common/perl-base
+    PERL5LIB=$(BUILD_TOP)/prebuilts/tools-custom/$(HOST_OS)-x86/lib/bin/perl
 
 ifneq ($(KERNEL_NO_GCC), true)
     GCC_PREBUILTS := $(BUILD_TOP)/prebuilts/gcc/$(HOST_PREBUILT_TAG)
